@@ -14,9 +14,8 @@ public class IndexController {
     private HttpServletRequest request;
 
     @DefaultAction
-    public String def(@QueryParam("name") Long name) {
-
-        return "Some template: " + name;
+    public String def(@QueryParam("name") Long param) {
+        return "Some template: " + param;
     }
 
     public String index() {
