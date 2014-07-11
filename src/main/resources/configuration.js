@@ -1,15 +1,19 @@
 var configuration = {
-	'application' : {
-		'components' : {
+    'application' : {
+        'components' : {
 
-			'logger' : {
-				'class' : 'hu.asd'
-			},
+            'logger' : {
+                'class' : 'hu.asd'
+            },
 
-			'controllerFactory' : {
-				'class' : 'io.pallas.core.controller.ControllerFactory',
-				'enabled' : true
-			}
-		}
-	}
+            'controllerFactory' : {
+                'enabled' : true
+            },
+            'urlManager' : {
+                'rules' : {
+                    '{controller}/{action}' : '{controller:[a-zA-Z0-9_]*}/{action:[a-zA-Z0-9_]*}'
+                }
+            }
+        }
+    }
 };
